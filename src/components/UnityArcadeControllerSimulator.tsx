@@ -1,3 +1,4 @@
+import useWindowSize from "@/libs/useWindowSize";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
 const UnityArcadeControllerSimulator = () => {
@@ -9,7 +10,14 @@ const UnityArcadeControllerSimulator = () => {
     codeUrl: "ArcadeController/Build/ArcadeControllerSimulator.wasm.unityweb",
   });
 
-  return <Unity unityProvider={unityProvider} />;
+  const [width, height] = useWindowSize();
+
+  return (
+    <Unity
+      unityProvider={unityProvider}
+      style={{ width: width, height: height, overflow: "hidden" }}
+    />
+  );
 };
 
 export default UnityArcadeControllerSimulator;
