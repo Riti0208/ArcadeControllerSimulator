@@ -14,6 +14,9 @@ const nextConfig = withPWA({
   },
   reactStrictMode: true,
   assetPrefix: branchName,
+  publicRuntimeConfig: {
+    basePath: branchName,
+  },
   basePath: branchName,
 });
 
