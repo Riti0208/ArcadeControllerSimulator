@@ -2,12 +2,11 @@ import { Unity, useUnityContext } from "react-unity-webgl";
 
 const UnityArcadeControllerSimulator = () => {
   const { unityProvider } = useUnityContext({
-    loaderUrl:
-      "ArcadeController/Build/ArcadeControllerSimulator.data.loader.js",
-    dataUrl: "ArcadeController/Build/ArcadeControllerSimulator.data.data",
+    loaderUrl: "ArcadeController/Build/ArcadeControllerSimulator.loader.js",
+    dataUrl: "ArcadeController/Build/ArcadeControllerSimulator.data.unityweb",
     frameworkUrl:
-      "ArcadeController/Build/ArcadeControllerSimulator.data.framework.js",
-    codeUrl: "ArcadeController/Build/ArcadeControllerSimulator.data.wasm",
+      "ArcadeController/Build/ArcadeControllerSimulator.framework.js.unityweb",
+    codeUrl: "ArcadeController/Build/ArcadeControllerSimulator.wasm.unityweb",
   });
 
   return <Unity unityProvider={unityProvider} />;
