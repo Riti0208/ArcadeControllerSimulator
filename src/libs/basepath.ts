@@ -4,7 +4,10 @@ import getConfig from "next/config";
 const { publicRuntimeConfig = {} } = getConfig() || {};
 const { basePath } = publicRuntimeConfig;
 
-const exportBasePath = (path: string): string =>
-  format((basePath || "") + (path || ""));
+const exportBasePath = (path: string) => {
+  const formatPath = format((basePath || "") + (path || ""));
+  console.log(formatPath);
+  return formatPath;
+};
 
 export default exportBasePath;
