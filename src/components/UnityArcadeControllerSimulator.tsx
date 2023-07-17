@@ -1,21 +1,18 @@
-import useWindowSize from "@/libs/useWindowSize";
 import { Unity, useUnityContext } from "react-unity-webgl";
 
 const UnityArcadeControllerSimulator = () => {
   const { unityProvider } = useUnityContext({
-    loaderUrl: "ArcadeController/Build/ArcadeControllerSimulator.loader.js",
-    dataUrl: "ArcadeController/Build/ArcadeControllerSimulator.data.unityweb",
+    loaderUrl: "ArcadeController/Build/ArcadeController.loader.js",
+    dataUrl: "ArcadeController/Build/ArcadeController.data.unityweb",
     frameworkUrl:
-      "ArcadeController/Build/ArcadeControllerSimulator.framework.js.unityweb",
-    codeUrl: "ArcadeController/Build/ArcadeControllerSimulator.wasm.unityweb",
+      "ArcadeController/Build/ArcadeController.framework.js.unityweb",
+    codeUrl: "ArcadeController/Build/ArcadeController.wasm.unityweb",
   });
-
-  const [width, height] = useWindowSize();
 
   return (
     <Unity
       unityProvider={unityProvider}
-      style={{ width: width, height: height, overflow: "hidden" }}
+      style={{ width: "100vw", height: "100vh" }}
     />
   );
 };
