@@ -8,7 +8,7 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="manifest"
-            href={B("/ArcadeControllerSimulator/manifest.json")}
+            href={B("/manifest.json")}
             crossOrigin="use-credentials"
           ></link>
           <link rel="apple-touch-icon" href={B("/icon.png")}></link>
