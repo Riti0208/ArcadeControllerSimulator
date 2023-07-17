@@ -2,7 +2,7 @@
   "theme_color": "#9d9c9c",
   "background_color": "#9d9c9c",
   "display": "fullscreen",
-  "scope": "/",
+  "scope": "/ArcadeControllerSimulator/",
   "start_url": "/",
   "name": "ArcadeControllerSimulator",
   "short_name": "ACS",
