@@ -6,7 +6,6 @@ const { basePath } = publicRuntimeConfig;
 
 const exportBasePath = (path: string) => {
   const formatPath = format((basePath || "") + (path || ""));
-  console.log(formatPath);
   return formatPath;
 };
 

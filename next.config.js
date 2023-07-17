@@ -16,6 +16,7 @@ const nextConfig = withPWA({
   assetPrefix: branchName,
   publicRuntimeConfig: {
     basePath: branchName,
+    assetPrefix: branchName,
   },
   basePath: branchName,
 });
